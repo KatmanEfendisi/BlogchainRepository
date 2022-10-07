@@ -12,6 +12,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.WriterPassword).NotEmpty().WithMessage("Şifre kısmı boş geçilemez.");
             RuleFor(x => x.WriterName).MinimumLength(2).WithMessage("Lütfen en az 2 karakter yazınız.");
             RuleFor(x => x.WriterName).MaximumLength(50).WithMessage("Lütfen en fazla 50 karakter yazınız.");
+            RuleFor(x => x.WriterAbout).NotEmpty().WithMessage("Yazar hakkında boş geçilemez.");
         }
     }
 }

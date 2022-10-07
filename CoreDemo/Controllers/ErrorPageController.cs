@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDemo.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     public class ErrorPageController : Controller
     {
         public IActionResult Error1(int code)

@@ -81,7 +81,7 @@
 
 						@await Component.InvokeAsync("CategoryList")
 
-						@await Component.InvokeAsync("WriterLastBlog")
+						@await Component.InvokeAsync("WriterLastBlog", new {id= ViewBag.i})
 						<div class="single-gd my-5 tech-btm">
 							<h4>Our Progress</h4>
 							<div class="progress">
@@ -130,6 +130,16 @@
 		</div>
 	</section>
 	<!--//main-->
+	<script>
+        $(window).scroll(function () {
+            sessionStorage.scrollTop = $(this).scrollTop();
+        });
+        $(document).ready(function () {
+            if (sessionStorage.scrollTop != "undefined") {
+                $(window).scrollTop(sessionStorage.scrollTop);
+            }
+        });
+    </script>
 </body>
 
 </html>

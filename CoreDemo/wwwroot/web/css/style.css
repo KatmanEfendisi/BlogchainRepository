@@ -148,7 +148,8 @@ a.sign {
     }
 
 .top-forms a i {
-    color: #01cd74;
+    /*color: #01cd74;*/
+    color: #7978FF;
 }
 
 .social_list1 li {
@@ -217,7 +218,8 @@ a.navbar-brand {
 }
 
 .logo i {
-    color: #01cd74;
+    /*color: #01cd74;*/
+    color: #7978FF;
     text-shadow: none;
 }
 
@@ -278,7 +280,7 @@ form.header-search {
     padding: 9px 9px 10px 9px;
     text-align: center;
     text-decoration: none;
-    background: #01cd74;
+    background: #7978FF;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -455,7 +457,8 @@ a.btn.btn-primary.read-m {
     border-radius: 0;
     padding: 0.55em 2em;
     letter-spacing: 1px;
-    background: #01cd74;
+    /*background: #01cd74;*/
+    background: #7978FF;
     border: none;
 }
 
@@ -774,7 +777,8 @@ ul.blog-icons a {
 }
 
 ul.blog-icons i {
-    color: #01cd74;
+    /*color: #01cd74;*/
+    color: #7978FF;
 }
 
 .blog-girds-sec {
@@ -813,7 +817,8 @@ ul.blog-icons i {
     }
 
     .tech-btm input[type="submit"] {
-        background: #01cd74;
+        /*background: #01cd74;*/
+        background: #7978FF;
         padding: .7em 1em;
         color: #fff;
         font-size: 15px;

@@ -11,10 +11,10 @@ namespace CoreDemo.ViewComponents.Blog
 
         public IViewComponentResult Invoke(int id)
         {
-            //Context c = new Context();
+            Context c = new Context();
 
-            //var writerID = c.Blogs.Where(x=>x.BlogID == id).Select(y => y.WriterID).FirstOrDefault();
-            var values = bm.GetBlogListByWriter(id);
+            var writerID = c.Blogs.Where(x => x.BlogID == id).Select(y => y.WriterID).FirstOrDefault();
+            var values = bm.GetBlogListByWriterExceptOneBlog(writerID,id);
             return View(values);
         }
     }

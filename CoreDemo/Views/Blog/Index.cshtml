@@ -1,9 +1,13 @@
-﻿@using EntityLayer.Concrete
-@model List<Blog>
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<EntityLayer.Concrete.Blog>
+@*@using EntityLayer.Concrete
+@model List<Blog>*@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
+
 
 <section class="main-content-w3layouts-agileits">
     <div class="container">
@@ -51,10 +55,11 @@
                     </div>
                     <br />
                    }
-
+                    @Html.PagedListPager((IPagedList)Model, page=>Url.Action("Index", new {page}))
                 </div>
 
             </div>
         </div>
     </div>
+
 </section>

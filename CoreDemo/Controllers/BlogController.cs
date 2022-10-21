@@ -7,6 +7,7 @@ using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using X.PagedList;
 
 namespace CoreDemo.Controllers
 {
@@ -16,9 +17,9 @@ namespace CoreDemo.Controllers
         private BlogManager bm = new BlogManager(new EfBlogRepository());
         private CategoryManager cm = new CategoryManager(new EfCategoryRepository());
         Context c = new Context();
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            var values = bm.GetBlogListWithCategory();
+            var values = bm.GetBlogListWithCategory().ToPagedList(page,12);
             return View(values);
         }
 

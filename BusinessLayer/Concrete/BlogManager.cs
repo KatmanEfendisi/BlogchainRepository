@@ -61,5 +61,11 @@ namespace BusinessLayer.Concrete
         {
             _blogDal.Update(t);
         }
+
+        public List<Blog> GetBlogListByWriterExceptOneBlog(int writerID, int blogID)
+        {
+            return _blogDal.GetListAll(x => x.WriterID == writerID && x.BlogID!=blogID);
+
+        }
     }
 }

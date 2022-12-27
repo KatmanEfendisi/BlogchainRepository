@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Message2
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>SendMessage</h1>
+
+<h1>Yeni Mesaj Oluşturma</h1>
+<br />
+@using (Html.BeginForm("SendMessage", "Message", FormMethod.Post))
+{
+    @Html.Label("Alıcı")
+    @*@Html.TextBoxFor(x=>x.BlogTitle, new { @class = "form-control"})*@
+    @*<input type="text" class="form-control" />*@
+    @Html.TextBoxFor(x=>x.ReceiverID, new { @class = "form-control"})
+    <br />
+    <br />
+    @Html.Label("Konu")
+    @Html.TextBoxFor(x=>x.Subject, new { @class = "form-control"}) 
+    <br />
+    @Html.Label("Mesajınız")
+    @Html.TextAreaFor(x=>x.MessageDetails, 15, 3, new { @class = "form-control"})
+    <br />
+    <br />
+    <button class="btn btn-info mt-4">Mesajı Gönder</button>
+}

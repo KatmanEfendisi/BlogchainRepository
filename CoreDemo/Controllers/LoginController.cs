@@ -34,8 +34,12 @@ namespace CoreDemo.Controllers
             }
             else
             {
-                return View();
-            }
+                return RedirectToAction("Index", "Login");
+            }         
+        }
+        public async Task<IActionResult> LogOut()
+        {
+            return RedirectToAction("Index", "Login");
         }
     }
 }
